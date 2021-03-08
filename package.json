@@ -1,0 +1,67 @@
+{
+  "name": "onzo",
+  "version": "2.0.0",
+  "private": true,
+  "description": "ONZO Website version 2.0",
+  "author": "sho <sskmy1024.y@gmail.com>",
+  "contributors": [],
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 12.13.1",
+    "yarn": ">= 1.17.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "prettier": "prettier --check src/**/*.{ts,tsx,js}",
+    "eslint": "eslint --ext .ts,.tsx,.js,.jsx ./src --max-warnings=0",
+    "eslint:fix": "eslint --fix --ext .ts,.tsx,.js,.jsx ./src --max-warnings=0 --no-ignore",
+    "lint": "yarn eslint"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "yarn eslint:fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.2",
+    "next": "10.0.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "remark": "^12.0.0",
+    "remark-html": "^12.0.0",
+    "styled-components": "^5.2.1",
+    "styled-reset": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.32",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-redux": "^7.1.16",
+    "@types/styled-components": "^5.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "printWidth": 120,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": true,
+  "arrowParens": "always",
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "overrides": [
+    {
+      "files": [
+        "tsconfig.json",
+        ".*rc.json",
+        ".babelrc"
+      ],
+      "options": {
+        "parser": "json-stringify"
+      }
+    }
+  ]
+}

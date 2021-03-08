@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    name: Typecheck & Prettier + ESLint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.13.1'
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --ignore-optional
+
+      - name: Typecheck
+        run: yarn typecheck
+
+      - name: Check prettier
+        run: yarn prettier
+
+      - name: Check eslint
+        run: yarn eslint
