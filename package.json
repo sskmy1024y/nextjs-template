@@ -1,8 +1,8 @@
 {
-  "name": "onzo",
+  "name": "nextjs-template",
   "version": "2.0.0",
   "private": true,
-  "description": "ONZO Website version 2.0",
+  "description": "",
   "author": "sho <sskmy1024.y@gmail.com>",
   "contributors": [],
   "engineStrict": true,
